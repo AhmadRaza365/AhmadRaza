@@ -45,12 +45,12 @@ export default function Home({aboutdata}) {
           </div>
 
           {aboutdata.map((imgItem, index) => (
-            <div key={index} className=" w-4/5 md:w-1/2 my-1 m-auto">
+            <div key={index} className=" w-4/5 md:w-2/5 my-1 m-auto">
               <Image
                 src={urlFor(imgItem.imgUrl).url()}
                 alt="AhmadRaza365 Profile"
-                width="1000"
-                height="1000"
+                width="1440"
+                height="2000"
               />
             </div>
           ))}
