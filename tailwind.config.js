@@ -17,6 +17,9 @@ module.exports = {
         'about-hero': "url('/abouthero.jpg')",
         'work-hero': "url('/workhero.jpg')",
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

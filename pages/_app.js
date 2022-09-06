@@ -9,6 +9,10 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Script
+        src="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+        rel="stylesheet"
+      ></Script>
+      <Script
         strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-B0RCDDLJEK"
       ></Script>

@@ -7,3 +7,13 @@
     }
 @tailwind components;
 @tailwind utilities;
+
+
+.swiper-pagination-bullet{
+    background: #F0F0F0 !important;
+    opacity: 90% !important;
+    
+}
+.swiper-pagination-bullet-active{
+    background: #FDDE24 !important;
+}
