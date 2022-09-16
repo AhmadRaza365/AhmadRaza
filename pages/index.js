@@ -1,6 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import {
+  MdDesignServices,
+  MdOutlineKeyboardArrowDown,
+  MdOutlineWeb,
+} from "react-icons/md";
+import { IoShareSocialSharp } from "react-icons/io5";
+import { SiGooglesearchconsole } from "react-icons/si";
+import { FaPhotoVideo, FaTools } from "react-icons/fa";
+import { AiFillApi, AiFillAudio } from "react-icons/ai";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,6 +24,124 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
+
+  const services = [
+    {
+      title: "Web Development",
+      description:
+        "I can provide you with the service that best fits your needs. My goal is to make your website a tool to help you reach your business goals. I will develop a site that will be Search engine friendly and easy to handle.",
+      image: <MdOutlineWeb className="text-light-primary text-5xl" />,
+    },
+    {
+      title: "UI/UX Designing",
+      description:
+        "I will create a user-friendly and engaging UI Design, so your users will have no trouble finding what they need and getting the most out of your service. I also have experience in building interactive content.",
+      image: <MdDesignServices className="text-light-primary text-5xl" />,
+    },
+    {
+      title: "Social Media Marketing",
+      description:
+        "Want to generate more sales? But you have no customer? I will help you with my social media marketing skills. With my experience, I can help you increase your sales by using social media to reach a wider audience.",
+      image: <IoShareSocialSharp className="text-light-primary text-5xl" />,
+    },
+    {
+      title: "Search Engine Optimization",
+      description:
+        "Do you have a website that doesn't appear in search results? Don't worry, I will help you to index your website in search engines through my expertise. I'll audit your website and fix all obstacles that are blocking you from your journey.",
+      image: <SiGooglesearchconsole className="text-light-primary text-5xl" />,
+    },
+    {
+      title: "Video Editing",
+      description:
+        "Have raw footage and looking for an editor to shape them? I am here to shape them in a final engaging video. I have good experience in video editing and would love to help you with your video project. My core strengths are video editing, audio editing, and color grading. I can also design custom graphics.",
+      image: <FaPhotoVideo className="text-light-primary text-5xl" />,
+    },
+  ];
+
+  const skills = [
+    {
+      title: "Frontend Development",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React JS",
+        "Next JS",
+        "Tailwind CSS",
+        "Bootstrap",
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+      ],
+      icon: <MdOutlineWeb className="text-light-primary" />,
+    },
+    {
+      title: "Backend",
+      skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "Firebase"],
+      icon: <AiFillApi className="text-light-primary" />,
+    },
+    {
+      title: "UI/UX",
+      skills: [
+        "Figma",
+        "Framer",
+        "Adobe XD",
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+      ],
+      icon: <MdDesignServices className="text-light-primary" />,
+    },
+    {
+      title: "Search Engine Optimization",
+      skills: [
+        "Keyword Research",
+        "On-Page SEO",
+        "Off-Page SEO",
+        "Website Audit",
+        "Google Search Console",
+      ],
+      icon: <SiGooglesearchconsole className="text-light-primary" />,
+    },
+    {
+      title: "Video Editing",
+      skills: ["Adobe Premiere Pro", "Adobe After Effects", "Color Grading"],
+      icon: <FaPhotoVideo className="text-light-primary" />,
+    },
+    {
+      title: "Social Media Marketing",
+      skills: [
+        "Lead Generation",
+        "Facebook",
+        "Instagram",
+        "Twitter",
+        "LinkedIn",
+        "Google Ads",
+      ],
+      icon: <IoShareSocialSharp className="text-light-primary" />,
+    },
+    {
+      title: "Audio Editing",
+      skills: ["Adobe Audition", "Audacity"],
+      icon: <AiFillAudio className="text-light-primary" />,
+    },
+
+    {
+      title: "Additional Skills",
+      skills: [
+        "Git Version Control",
+        "GitHub",
+        "CI/CD",
+        "Firebase",
+        "Google Cloud",
+        "Digital Ocean",
+        "Heroku",
+        "Netlify",
+        "Vercel",
+      ],
+      icon: <FaTools className="text-light-primary" />,
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -159,22 +285,15 @@ export default function Home() {
               }}
               className="servicesSlider"
             >
-              <SwiperSlide className="py-12">
-                <ServicesCard />
-              </SwiperSlide>
-              <SwiperSlide className="py-12">
-                <ServicesCard />
-              </SwiperSlide>
-              <SwiperSlide className="py-12">
-                <ServicesCard />
-              </SwiperSlide>
-              <SwiperSlide className="py-12">
-                <ServicesCard />
-              </SwiperSlide>
-              <SwiperSlide className="py-12">
-                <ServicesCard />
-              </SwiperSlide>
-              ...
+              {services.map((service, index) => (
+                <SwiperSlide key={index} className="py-12">
+                  <ServicesCard
+                    title={service.title}
+                    description={service.description}
+                    image={service.image}
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </section>
@@ -194,19 +313,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-2 lg:gap-x-6 gap-y-8 items-center justify-items-center mt-10 mb-4">
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
-            <SkillsCard />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-2 lg:gap-x-6 gap-y-8 items-start justify-items-start mt-10 mb-4">
+            {skills.map((skill, index) => (
+              <SkillsCard
+                key={index}
+                title={skill.title}
+                skills={skill.skills}
+                icon={skill.icon}
+              />
+            ))}
           </div>
         </section>
         <div className="my-8 flex flex-col items-center">

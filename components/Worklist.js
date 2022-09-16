@@ -58,9 +58,9 @@ const Worklist = () => {
       ))}
 
       <motion.div
-        initial={{ scale: 0 }}
+        initial={{ scale: 0.5 }}
         animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        transition={{ duration: 0.1, delayChildren: 0.1 }}
         className="flex flex-wrap justify-center gap-5 my-4"
       >
         {filterWork.map((work, index) => (
