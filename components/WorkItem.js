@@ -14,7 +14,7 @@ const WorkItem = (props) => {
           height="1200"
         />
       </div>
-      <div className="flex flex-col justify-between min-h-[490px]  p-5 hover:backdrop-blur-sm hover:backdrop-brightness-50 bg-dark-secondary/20 w-full opacity-0 hover:opacity-100 h-full text-dark-primary rounded-2xl transition-all duration-75 ease-in">
+      <div className="z-[1] flex flex-col justify-between min-h-[490px]  p-5 bg-dark-secondary/80 w-full opacity-0 hover:opacity-100 h-full text-dark-primary rounded-2xl transition-all duration-75 ease-in">
         <h2 className="text-3xl text-light-primary font-bold text-center pt-2">
           {props.title}
         </h2>

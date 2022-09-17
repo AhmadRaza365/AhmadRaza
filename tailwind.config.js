@@ -7,15 +7,14 @@ module.exports = {
     extend: {
       colors: {
         transparent: "transparent",
-        'dark-primary': '#111111',
-        'dark-secondary': '#252525',
-        'light-primary': '#FDDE24',
-        'light-secondary': '#F0F0F0',
-        'white': '#FFFFFF',
+        "dark-primary": "#111111",
+        "dark-secondary": "#252525",
+        "light-primary": "#FDDE24",
+        "light-secondary": "#F0F0F0",
+        white: "#FFFFFF",
       },
       backgroundImage: {
-        'about-hero': "url('/abouthero.jpg')",
-        'work-hero': "url('/workhero.jpg')",
+        "work-hero": "url('/workhero.jpg')",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
@@ -23,4 +22,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
