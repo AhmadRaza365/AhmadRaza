@@ -4,17 +4,17 @@ import { urlFor } from "../client";
 
 const WorkItem = (props) => {
   return (
-    <div className="w-72 min-h-fit max-h-full rounded-2xl bg-transparent  relative flex items-end transition  ease-in-out duration-300 drop-shadow-lg hover:translate-y-2">
+    <div className="aspect-video min-h-fit max-h-full rounded-2xl bg-transparent  relative flex items-end transition  ease-in-out duration-300 drop-shadow-lg hover:translate-y-2">
       <div className="w-full h-full object-cover absolute top-0 left-0 rounded-2xl  hover:backdrop-brightness-50">
         <Image
           src={urlFor(props.imgUrl).url()}
           alt={props.title}
-          className="rounded-2xl"
-          width="720"
-          height="1200"
+          className="rounded-2xl object-cover"
+          width="1920"
+          height="1080"
         />
       </div>
-      <div className="z-[1] flex flex-col justify-between min-h-[490px]  p-5 bg-dark-secondary/80 w-full opacity-0 hover:opacity-100 h-full text-dark-primary rounded-2xl transition-all duration-75 ease-in">
+      <div className="z-[1] flex flex-col justify-between ~min-h-[490px]  p-5 bg-dark-secondary/80 w-full opacity-0 hover:opacity-100 h-full text-dark-primary rounded-2xl transition-all duration-75 ease-in">
         <h2 className="text-3xl text-light-primary font-bold text-center pt-2">
           {props.title}
         </h2>
