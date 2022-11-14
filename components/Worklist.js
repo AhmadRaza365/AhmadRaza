@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { client } from "../client";
 import WorkItem from "./WorkItem";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
@@ -47,7 +48,7 @@ const Worklist = () => {
             <button
               key={index}
               onClick={() => handleWorkFilter(tag)}
-              className={`hover:text-light-primary  bg-transparent border-2  hover:border-light-primary px-2 py-1 my-2 text-lg 2xl:text-2xl font-bold rounded-md transition-all duration-300 ease-in ${
+              className={`hover:text-light-primary  bg-transparent border-2  hover:border-light-primary px-2 py-1 my-2 text-lg font-bold rounded-md transition-all duration-300 ease-in ${
                 activeFilter === tag
                   ? "border-light-primary text-light-primary"
                   : "border-white text-white"
@@ -59,7 +60,7 @@ const Worklist = () => {
         </div>
       ))}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 lg:gap-8 2xl:gap-12 my-4 px-5 md:px-10 2xl:px-16">
+      <div className="flex flex-wrap justify-center gap-5 my-4">
         {filterWork.map((work, index) => (
           <WorkItem
             key={index}

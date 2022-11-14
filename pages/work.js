@@ -52,7 +52,7 @@ export default function Work() {
       </Head>
       <main>
         {/* Work Page Hero section */}
-        <div className="bg-work-hero bg-top bg-no-repeat ~bg-auto bg-cover w-screen h-[40vh] md:h-[40vh]  flex flex-col justify-center items-center ">
+        <div className="bg-work-hero bg-top bg-no-repeat bg-auto w-screen h-[50vh] md:h-[60vh]  flex flex-col justify-center items-center ">
           <h2 className="text-white text-4xl md:text-6xl text-center my-2">
             Do What you Love
             <br />

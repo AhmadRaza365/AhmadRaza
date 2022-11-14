@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`py-2 px-5 md:px-10 2xl:px-16 bg-dark-primary/70 backdrop-blur-sm z-20 sticky top-0 flex justify-between items-center shadow-lg`}
+      className={`py-2 px-5 md:px-10 bg-dark-primary/70 backdrop-blur-sm z-20 sticky top-0 flex justify-between items-center shadow-lg`}
     >
       <Link href="/">
         <a className="cursor-pointer flex gap-3 items-center">
